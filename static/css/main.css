@@ -1,0 +1,616 @@
+@-ms-viewport     { width: device-width; }
+@-o-viewport      { width: device-width; }
+@viewport         { width: device-width; }
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.spacer {
+  margin: 0;
+  padding: 0;
+  height: 4px;
+}
+
+.carousel-description {
+    padding: 25px 0px;
+    font-size: 140%;
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    color:black;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    opacity: 0.7;
+    filter: brightness(50%);
+}
+
+.carousel-inner>a.button4{
+ display:inline-block;
+ padding:0.3em 1.2em;
+ margin:0 0.1em 0.1em 0;
+ border:0.16em solid rgba(255,255,255,0);
+ border-radius:2em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#FFFFFF;
+ text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+ text-align:center;
+ transition: all 0.2s;
+}
+.carousel-inner>a.button4:hover{
+ border-color: rgba(255,255,255,1);
+}
+@media all and (max-width:30em){
+ a.button4{
+  display:block;
+  margin:0.2em auto;
+ }
+}
+/* ---------------------------------------------------*/
+/* NAV BAR */
+/* ---------------------------------------------------*/
+
+.logo a {
+    font-family: 'Rubik', monospace;
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+    text-decoration: none;
+}
+
+.navbar-header:hover .logo a {
+    color: #990000;
+    text-decoration: none;
+}
+
+.logo img {
+  height: 50px;
+  margin: 8px;
+}
+
+.nav {
+    float:none;
+    text-align: center;
+    list-style: none;
+}
+
+nav {
+    background-color: #333;
+    position: fixed;
+    z-index: 99999;
+    top: 0px;
+    width: 100%;
+}
+
+.nav li a:link,
+.nav li a:visited {
+    padding: 3px 0px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav li a:hover,
+.nav li a:active {
+    color:#B31B1B;
+    background-color: transparent;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.current {
+    border-bottom: 2px solid #B31B1B;
+}
+
+.navbar-text {
+    font-size: 140%;
+    text-transform: uppercase;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+    font-family: "Archivo";
+}
+
+.nav li {
+    padding-top: 2px;
+    margin-left: 10px;
+}
+
+
+
+
+/* ---------------------------------------------------*/
+/* ABOUT */
+/* ---------------------------------------------------*/
+
+.carousel-title {
+    font-size: 200%;
+    letter-spacing: 0.5px;
+}
+
+.carousel-solo {
+    font-size: 400%;
+    font-family:"Archivo";
+    color:white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 60px;
+    width: 100%
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+  font-family: 'Rubik', sans-serif;
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  .caoursel-caption {
+    font-size: 30px;
+  }
+}
+
+.about-history,
+.about-highlights,
+.about-dave {
+    padding: 50px 0px;
+}
+
+.about-highlights {
+    background-color: #F7F7F7;
+}
+
+
+/* ---------------------------------------------------*/
+/* PROJECTS */
+/* ---------------------------------------------------*/
+
+.project-breakdown {
+    padding: 60px 0px;
+}
+
+.minibot {
+    padding: 50px 0px;
+}
+
+.team-breakdown,
+.pogo,
+.Wall {
+    background-color: #F7F7F7;
+    padding: 50px 0px;
+}
+
+.project-title {
+    padding: 20px 0px;
+
+}
+
+.project-intro {
+    padding-bottom: 30px;
+}
+
+.project-title:after {
+    display: block;
+    height: 2px;
+    background-color: #B31B1B;
+    content: " ";
+    width: 250px;
+    margin: 20px auto;
+}
+
+/* ---------------------------------------------------*/
+/* MEMBERS (OLD)*/
+/* ---------------------------------------------------*/
+.members {
+    padding: 70px 0px;
+}
+
+.member {
+    padding-bottom: 15px;
+}
+
+.about-description {
+    margin: 30px 0px;
+}
+
+.section-name {
+    margin-bottom: 50px;
+}
+
+.section-name a:link,
+.section-name a:visited {
+    text-decoration: none;
+    color:#222222;
+}
+
+.section-name a:hover,
+.section-name a:active {
+    color:#B31B1B;
+    background-color: transparent;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+
+/* ---------------------------------------------------*/
+/* SPONSORS */
+/* ---------------------------------------------------*/
+
+.sponsor-images {
+    margin-bottom: 3px;
+}
+
+.sponsor-packet {
+    font-size: 30px;
+    text-decoration: none;
+    padding-bottom: 4 vh;
+}
+
+.sponsor-title {
+    padding: 10px 0 vh;
+    background-color: #F7F7F7;
+}
+
+.current-sponsors {
+    padding-top: 3px;
+}
+
+
+/* ---------------------------------------------------*/
+/* RECRUITMENT */
+/* ---------------------------------------------------*/
+.recruitment-description {
+    font-size: 140%;
+    text-decoration: none;
+}
+
+
+/* ---------------------------------------------------*/
+/* FOOTER */
+/* ---------------------------------------------------*/
+footer {
+    background-color: #333;
+    padding: 2% 0%;
+}
+
+.footer-links {
+    padding: 0px 5px 0px 15px;
+    text-align: left;
+    text-decoration: none;
+    color:#9b9b9b;
+    font-size: 115%;
+    text-transform: uppercase;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.social-media a {
+    font-size:35px;
+}
+
+.social-media a:hover,
+.social-media a:active {
+    color:#F7F7F7;
+    background-color: transparent;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-links a:link,
+.footer-links a:visited {
+    text-decoration: none;
+    color:#9b9b9b;
+}
+
+.footer-links a:hover,
+.footer-links a:active {
+    color:#F7F7F7;
+    background-color: transparent;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Google */
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+/* LinkedIn */
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.copyright {
+    color:#9b9b9b;
+    font-size: 20px;
+    text-align: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* ---------------------------------------------------*/
+/* MEMBERS */
+/* ---------------------------------------------------*/
+
+.single_catagory_area {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 240px;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single_catagory_area {
+      height: 180px; } }
+  @media only screen and (max-width: 767px) {
+    .single_catagory_area {
+      height: 180px; } }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .single_catagory_area {
+      margin-bottom: 30px; } }
+  .single_catagory_area:after {
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10; }
+  .single_catagory_area .catagory-content a {
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .single_catagory_area .catagory-content a {
+        font-size: 20px; } }
+    @media only screen and (max-width: 767px) {
+      .single_catagory_area .catagory-content a {
+        font-size: 18px; } }
+  .single_catagory_area:hover .catagory-content a {
+    color: 	#C00000 ; }
+
+    .section-padding-80 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .section-padding-80-0 {
+        padding-top: 80px;
+        padding-bottom: 0;
+    }
+
+    .section-padding-0-80 {
+        padding-top: 0;
+        padding-bottom: 80px;
+    }
+
+    .bg-img {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .align-items-center {
+        -ms-flex-align: center!important;
+        align-items: center!important;
+    }
+    .justify-content-center {
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+    .d-flex {
+        display: -ms-flexbox!important;
+        display: flex!important;
+    }
+
+/* ---------------------------------------------------*/
+/* HEADSHOTS */
+/* ---------------------------------------------------*/
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #b04242;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  padding: 50px 20px;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: calc(100% + 20px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px,0,0);
+  transform: translate3d(-10px,0,0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #ffff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  overflow: hidden;
+  padding: 0.5em 0;
+  background-color: transparent;
+}
+
+.hovereffect h2:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ffff;
+  content: '';
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%,0,0);
+}
+
+.hovereffect:hover h2:after {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.hovereffect a, .hovereffect p {
+  color: #ffff;
+  opacity: 0;
+      font-size: 60%;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+}
+
+.hovereffect:hover a, .hovereffect:hover p {
+  opacity: 1;
+    font-size: 60%;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+    .image-list-small {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  max-width: 2000px;
+  padding: 0;
+}
+
+.image-list-small li {
+  display: inline-block;
+  width: 400px;
+  margin: 0 12px 30px;
+}
+
+/* Photo */
+
+.image-list-small li > a {
+  display: block;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 2px 1px #DDD;
+}
+
+.image-list-small .details {
+  margin-top: 13px;
+}
+
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 2000px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
+}
+
+/* ---------------------------------------------------*/
+/* TYPEWRITE ANIMATION */
+/* ---------------------------------------------------*/
+
+  .typewriter {
+    /* color: white; */
+    /* font-weight: 700px;
+    font-size: 80px;
+    font-family: IBM Plex Sans; */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+      typing 1.8s steps(25, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }

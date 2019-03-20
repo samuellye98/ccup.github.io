@@ -1,0 +1,173 @@
+---
+layout: default
+---
+	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image: url(/static/images/team2.jpg)" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row row-mt-15em">
+				<div class="col-md-7 mt-text text-left animate-box" data-animate-effect="fadeInUp">
+					<h1>Our <strong>Team</strong></h1>
+					<h2>We are a team of 60 undergraduates and graduates at Cornell University focused on experimental robotics, effective design work, and proper documentation.</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- main container -->
+	<div class="main-container portfolio-inner clearfix">
+			<!-- portfolio div -->
+			<div class="portfolio-div">
+					<div class="portfolio">
+							<!-- portfolio_filter -->
+							<div class="categories-grid wow fadeInLeft">
+									<nav class="categories text-center">
+											<ul class="portfolio_filter">
+													<li><a href="" class="active" data-filter="*">All</a></li>
+													<li><a href="" data-filter=".leads">Team Leads</a></li>
+													<li><a href="" data-filter=".cs">Computer Science</a></li>
+													<li><a href="" data-filter=".meche">Mechanical</a></li>
+													<li><a href="" data-filter=".ece">ECE</a></li>
+													<li><a href="" data-filter=".sys">Systems</a></li>
+													<li><a href="" data-filter=".comms">Communications</a></li>
+											</ul>
+									</nav>
+							</div>
+							<!-- portfolio_filter -->
+
+							<!-- portfolio_container -->
+							<div class="no-padding portfolio_container clearfix">
+									<!-- TEAM LEADS -->
+									{% for m in site.data.r %}
+									{% if m.Subteam contains "Lead" %}
+									<div class="col-md-4 col-sm-6  leads">
+											<a href="single-project.html" class="portfolio_item">
+												<a class="gtco-card-item">
+													<img src="/static/images/test/{{m.headshot}}" alt="image" class="img-responsive" />
+															<div class="portfolio-border clearfix">
+																<div class="gtco-text">
+																	<h2>{{m.Firstname}} {{m.Lastname}}</h2>
+																	<p style="margin-bottom: 10px">{{m.Subteam}}{{m.Project}}</p>
+																	<p style="margin-bottom: 10px" class="gtco-category"><span>{{m.Major}}, {{m.Year}}</span></p>
+																</div>
+															</div>
+												</a>
+											</a>
+									</div>
+									{% endif %}
+									{% endfor %}
+									<!-- END TEAM LEADS -->
+
+									<!-- CS START -->
+									{% for m in site.data.r %}
+									{% if m.Subteam=="CS" %}
+									<div class="col-md-4 col-sm-6 cs">
+											<a href="single-project.html" class="portfolio_item">
+												<a class="gtco-card-item">
+													<img src="/static/images/test/{{m.headshot}}" alt="image" class="img-responsive" />
+															<div class="portfolio-border clearfix">
+																<div class="gtco-text">
+																	<h2>{{m.Firstname}} {{m.Lastname}}</h2>
+																	<p style="margin-bottom: 10px">{{m.Subteam}}{{m.Project}}</p>
+																	<p style="margin-bottom: 10px" class="gtco-category"><span>{{m.Major}}, {{m.Year}}</span></p>
+																</div>
+															</div>
+												</a>
+											</a>
+									</div>
+									{% endif %}
+									{% endfor %}
+									<!-- CS END -->
+
+									<!-- MECHE START -->
+									{% for m in site.data.r %}
+									{% if m.Subteam=="ECE" %}
+									<div class="col-md-4 col-sm-6 ece">
+											<a href="single-project.html" class="portfolio_item">
+												<a class="gtco-card-item">
+													<img src="/static/images/test/{{m.headshot}}" alt="image" class="img-responsive" />
+															<div class="portfolio-border clearfix">
+																<div class="gtco-text">
+																	<h2>{{m.Firstname}} {{m.Lastname}}</h2>
+																	<p style="margin-bottom: 10px">{{m.Subteam}}{{m.Project}}</p>
+																	<p style="margin-bottom: 10px" class="gtco-category"><span>{{m.Major}}, {{m.Year}}</span></p>
+																</div>
+															</div>
+												</a>
+											</a>
+									</div>
+									{% endif %}
+									{% endfor %}
+									<!-- MECHE END -->
+
+									<!-- ECE START -->
+									{% for m in site.data.r %}
+									{% if m.Subteam=="MechE" %}
+									<div class="col-md-4 col-sm-6 meche">
+											<a href="single-project.html" class="portfolio_item">
+												<a class="gtco-card-item">
+													<img src="/static/images/test/{{m.headshot}}" alt="image" class="img-responsive" />
+															<div class="portfolio-border clearfix">
+																<div class="gtco-text">
+																	<h2>{{m.Firstname}} {{m.Lastname}}</h2>
+																	<p style="margin-bottom: 10px">{{m.Subteam}}{{m.Project}}</p>
+																	<p style="margin-bottom: 10px" class="gtco-category"><span>{{m.Major}}, {{m.Year}}</span></p>
+																</div>
+															</div>
+												</a>
+											</a>
+									</div>
+									{% endif %}
+									{% endfor %}
+									<!-- ECE END -->
+
+									<!-- SYSTEMS START -->
+									{% for m in site.data.r %}
+									{% if m.Subteam=="Systems" %}
+									<div class="col-md-4 col-sm-6 sys">
+											<a href="single-project.html" class="portfolio_item">
+												<a class="gtco-card-item">
+													<img src="/static/images/test/{{m.headshot}}" alt="image" class="img-responsive" />
+															<div class="portfolio-border clearfix">
+																<div class="gtco-text">
+																	<h2>{{m.Firstname}} {{m.Lastname}}</h2>
+																	<p style="margin-bottom: 10px">{{m.Subteam}}{{m.Project}}</p>
+																	<p style="margin-bottom: 10px" class="gtco-category"><span>{{m.Major}}, {{m.Year}}</span></p>
+																</div>
+															</div>
+												</a>
+											</a>
+									</div>
+									{% endif %}
+									{% endfor %}
+									<!-- SYSTEMS END -->
+
+									<!-- COMMS START -->
+									{% for m in site.data.r %}
+									{% if m.Subteam=="Communications" %}
+									<div class="col-md-4 col-sm-6 comms">
+											<a href="single-project.html" class="portfolio_item">
+												<a class="gtco-card-item">
+													<img src="/static/images/test/{{m.headshot}}" alt="image" class="img-responsive" />
+															<div class="portfolio-border clearfix">
+																<div class="gtco-text">
+																	<h2>{{m.Firstname}} {{m.Lastname}}</h2>
+																	<p style="margin-bottom: 10px">{{m.Subteam}}{{m.Project}}</p>
+																	<p style="margin-bottom: 10px" class="gtco-category"><span>{{m.Major}}, {{m.Year}}</span></p>
+																</div>
+															</div>
+												</a>
+											</a>
+									</div>
+									{% endif %}
+									{% endfor %}
+									<!-- COMMS END -->
+
+
+							</div>
+							<!-- end portfolio_container -->
+					</div>
+					<!-- portfolio -->
+			</div>
+			<!-- end portfolio div -->
+	</div>
+	<!-- end main container -->
