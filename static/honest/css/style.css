@@ -151,6 +151,13 @@ h1, h2, h3, h4, h5, h6, figure {
     display: block;
 }
 
+.responsive {
+  max-width: 300px;
+  min-width: 220px;
+  width: 100%;
+  height: auto;
+}
+
 .gtco-nav {
   position: absolute;
   top: 50px;
@@ -739,6 +746,7 @@ form label {
   display: block;
   text-align: center;
   margin-left: 3px;
+  margin-top: 2px;
 }
 
 #gtco-features,
@@ -748,7 +756,6 @@ form label {
 #gtco-subscribe,
 #gtco-footer,
 .gtco-section {
-  padding: 7em 0;
   clear: both;
   position: relative;
 }
@@ -2548,6 +2555,24 @@ b i:last-child {
 ==================================================*/
 .main-container {
     padding: 100px 0;
+}
+
+.wrapper {
+  width:80%;
+  margin-left:10%;
+  position: relative;
+  display:inline-block;
+  text-align:center;
+}
+
+@media only screen and (max-width: 767px) {
+.wrapper{
+  width:100%;
+  margin-left:0% !important;
+  position: relative;
+  display: block;
+  text-align: center;
+  }
 }
 
 /* preloader
