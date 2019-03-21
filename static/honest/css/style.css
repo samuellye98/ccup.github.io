@@ -2145,7 +2145,7 @@ form label {
   color: #B31B1B;
 }
 
-/* box-intro
+/* RECRUITMENT PAGE
 ==================================================*/
 
 .box-intro {
@@ -2344,7 +2344,7 @@ b i:last-child {
     opacity: 1;
 }
 
-/* Members
+/* MEMBERS
 ==================================================*/
 
 .portfolio .categories-grid span {
@@ -2552,7 +2552,7 @@ b i:last-child {
     }
 }
 
-/* index container
+/* INDEX CONTAINER
 ==================================================*/
 .main-container {
     padding: 100px 0;
@@ -2576,7 +2576,7 @@ b i:last-child {
   }
 }
 
-/* preloader
+/* PRELOADER
 ==================================================*/
 
 #preloader {
