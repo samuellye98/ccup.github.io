@@ -69,113 +69,157 @@ layout: default
 		</div><!-- End of container -->
 	</section>
 
-	<!-- Work -->
-	<div id="work">
-			<div class="section-seperator">
-					<div class="content-md container">
-							<div class="row margin-b-40">
-									<div class="col-sm-6">
-											<h2>Work</h2>
-											<p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed tempor incididunt ut laboret dolore magna aliqua enim minim veniam exercitation</p>
-									</div>
-							</div>
-							<!--// end row -->
-
-	<div class="gtco-section gtco-gray-bg">
+	<!-- <div class="gtco-section gtco-gray-bg">
 		<div class="gtco-container">
 			<div class="row">
 
+				{% for m in site.data.projects %}
 				<div class="col-lg-4 col-md-4 col-sm-6">
 					<a href="#" class="gtco-card-item">
 						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="static/images/projects/pogo.png" alt="Image" class="img-responsive">
+							<img src="static/images/projects/{{m.image}}" alt="Image" class="img-responsive">
 						</figure>
 						<div class="gtco-text">
-							<h2>Pogo</h2>
-							<p>We decided on this project because it proposed interesting problems in all of the Mechanical, Electrical, Software, and Systems Engineering fields and requires a good deal of interdisciplinary work that we promote at Cornell Cup. For this semester, we aim to create a 2D version of Pogo that leans on an inclined wall, so that it can only bounce in a plane. Moving forwards, we look to create a full 3D version that can follow you around the lab.</p>
-							<p class="gtco-category"><span>2015</span></p>
+							<h2>{{m.name}}</h2>
+							<p>{{m.status}}</p>
+							<span href="#openModal" class="btn btn-primary">Learn more</span>
 						</div>
 					</a>
 				</div>
 
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="gtco-card-item">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="static/images/projects/wall.png" alt="Image" class="img-responsive">
-						</figure>
-						<div class="gtco-text">
-							<h2>Interactive Wall</h2>
-							<p>The Interactive Wall is a wall designed to teach young students how to code. It uses physical blocks with code snippets that are then translated into physical movements of a robot. Players can start with basic maze games and advance to challenging levels with moving opponents, using their coding concepts and logic. The Wall can control both the 2D system and the MiniBot. The team is also working on 4D features that can enhance this fun but also educational experience.</p>
-							<p class="gtco-category"><span>2016</span></p>
-						</div>
-					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div> -->
+
+	<section id="portfolio">
+		<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<div class="section-title">
+					<h2>Our Works</h2>
+					<p>Our portfolio is the best way to show our work, you can see here a big range of our work. Check them all and you will find what you are looking for.</p>
 				</div>
-
-				<div class="clearfix visible-sm-block"></div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="gtco-card-item">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="static/images/projects/drummer.JPG" alt="Image" class="img-responsive">
-						</figure>
-						<div class="gtco-text">
-							<h2>The Band</h2>
-							<p>Description</p>
-							<p class="gtco-category"><span>Year</span></p>
-						</div>
-					</a>
+			</div>
+		</div>
+		<div class="row row-0-gutter">
+			<!-- start portfolio item -->
+			{% for m in site.data.projects %}
+			<div class="col-md-6 col-0-gutter">
+				<div class="ot-portfolio-item">
+					<figure class="effect-bubba">
+						<img src="static/images/projects/{{m.image}}" alt="img02" class="img-responsive" />
+						<figcaption>
+							<h2>{{m.name}}</h2>
+							<p>Click to Learn More!</p>
+							<a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+						</figcaption>
+					</figure>
 				</div>
+			</div>
+			{% endfor %}
+			<!-- end portfolio item -->
+		</div>
+		</div><!-- container -->
+	</section>
 
-				<div class="clearfix visible-lg-block visible-md-block"></div>
 
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="gtco-card-item">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="static/honest/images/img_1.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="gtco-text">
-							<h2>Project Name Here</h2>
-							<p>Description</p>
-							<p class="gtco-category"><span>Year</span></p>
-						</div>
-					</a>
+	<!-- Modal for portfolio item 1 -->
+	<div class="modal fade" id="Modal-1" tabindex="-1" role="dialog" aria-labelledby="Modal-label-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="Modal-label-1">Dean & Letter</h4>
 				</div>
-				<div class="clearfix visible-sm-block"></div>
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="gtco-card-item">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="static/honest/images/img_2.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="gtco-text">
-							<h2>Project Name Here</h2>
-							<p>Description</p>
-							<p class="gtco-category"><span>Year</span></p>
-						</div>
-					</a>
+				<div class="modal-body">
+					<img src="images/demo/portfolio-1.jpg" alt="img01" class="img-responsive" />
+					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
 				</div>
-
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="gtco-card-item">
-						<figure>
-							<div class="overlay"><i class="ti-plus"></i></div>
-							<img src="static/honest/images/img_3.jpg" alt="Image" class="img-responsive">
-						</figure>
-						<div class="gtco-text">
-							<h2>Project Name Here</h2>
-							<p>Description</p>
-							<p class="gtco-category"><span>Year</span></p>
-						</div>
-					</a>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
+			</div>
+		</div>
+	</div>
 
-				<div class="clearfix visible-lg-block visible-md-block"></div>
-				<div class="clearfix visible-sm-block"></div>
+	<!-- Modal for portfolio item 2 -->
+	<div class="modal fade" id="Modal-2" tabindex="-1" role="dialog" aria-labelledby="Modal-label-2">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="Modal-label-2">Startup Framework</h4>
+				</div>
+				<div class="modal-body">
+					<img src="images/demo/portfolio-2.jpg" alt="img01" class="img-responsive" />
+					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<!-- Modal for portfolio item 3 -->
+	<div class="modal fade" id="Modal-3" tabindex="-1" role="dialog" aria-labelledby="Modal-label-3">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="Modal-label-3">Lamp & Velvet</h4>
+				</div>
+				<div class="modal-body">
+					<img src="images/demo/portfolio-3.jpg" alt="img01" class="img-responsive" />
+					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for portfolio item 4 -->
+	<div class="modal fade" id="Modal-4" tabindex="-1" role="dialog" aria-labelledby="Modal-label-4">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="Modal-label-4">Smart Name</h4>
+				</div>
+				<div class="modal-body">
+					<img src="images/demo/portfolio-4.jpg" alt="img01" class="img-responsive" />
+					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for portfolio item 5 -->
+	<div class="modal fade" id="Modal-5" tabindex="-1" role="dialog" aria-labelledby="Modal-label-5">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="Modal-label-5">Fast People</h4>
+				</div>
+				<div class="modal-body">
+					<img src="images/demo/portfolio-5.jpg" alt="img01" class="img-responsive" />
+					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
+					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
 			</div>
 		</div>
 	</div>
