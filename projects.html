@@ -39,7 +39,7 @@ layout: default
 
 					<div class="col-md-4 col-sm-12 col-xs-12">
 						<div class="single_works_text_middel text-center wow fadeInDown" data-wow-duration="2s">
-							<img src="static/images/workiphone.png" alt="" />
+							<img src="static/images/projects/r2.png" alt="" />
 						</div>
 					</div>
 
@@ -69,29 +69,6 @@ layout: default
 		</div><!-- End of container -->
 	</section>
 
-	<!-- <div class="gtco-section gtco-gray-bg">
-		<div class="gtco-container">
-			<div class="row">
-
-				{% for m in site.data.projects %}
-				<div class="col-lg-4 col-md-4 col-sm-6">
-					<a href="#" class="gtco-card-item">
-						<figure>
-							<img src="static/images/projects/{{m.image}}" alt="Image" class="img-responsive">
-						</figure>
-						<div class="gtco-text">
-							<h2>{{m.name}}</h2>
-							<p>{{m.status}}</p>
-							<span href="#openModal" class="btn btn-primary">Learn more</span>
-						</div>
-					</a>
-				</div>
-
-				{% endfor %}
-			</div>
-		</div>
-	</div> -->
-
 	<section id="portfolio">
 		<div class="container">
 		<div class="row">
@@ -102,8 +79,9 @@ layout: default
 				</div>
 			</div>
 		</div>
+
 		<div class="row row-0-gutter">
-			<!-- start portfolio item -->
+			<!-- start project -->
 			{% for m in site.data.projects %}
 			<div class="col-md-6 col-0-gutter">
 				<div class="ot-portfolio-item">
@@ -112,30 +90,31 @@ layout: default
 						<figcaption>
 							<h2>{{m.name}}</h2>
 							<p>Click to Learn More!</p>
-							<a href="#" data-toggle="modal" data-target="#Modal-1">View more</a>
+							<a href="#" data-toggle="modal" data-target="{{m.modal}}">View more</a>
 						</figcaption>
 					</figure>
 				</div>
 			</div>
 			{% endfor %}
-			<!-- end portfolio item -->
+			<!-- end project -->
 		</div>
 		</div><!-- container -->
 	</section>
 
 
-	<!-- Modal for portfolio item 1 -->
-	<div class="modal fade" id="Modal-1" tabindex="-1" role="dialog" aria-labelledby="Modal-label-1">
+	<!-- Modal for projects-->
+	{% for m in site.data.projects %}
+	<div class="modal fade" id="{{m.id}}" tabindex="-1" role="dialog" aria-labelledby="{{m.label}}">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="Modal-label-1">Dean & Letter</h4>
+					<h4 class="modal-title" id="{{m.label}}">{{m.name}}</h4>
 				</div>
 				<div class="modal-body">
-					<img src="images/demo/portfolio-1.jpg" alt="img01" class="img-responsive" />
+					<img src="static/images/projects/{{m.image}}" alt="img01" class="img-responsive" />
 					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
+					<p>{{m.description}}</p>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -143,83 +122,4 @@ layout: default
 			</div>
 		</div>
 	</div>
-
-	<!-- Modal for portfolio item 2 -->
-	<div class="modal fade" id="Modal-2" tabindex="-1" role="dialog" aria-labelledby="Modal-label-2">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="Modal-label-2">Startup Framework</h4>
-				</div>
-				<div class="modal-body">
-					<img src="images/demo/portfolio-2.jpg" alt="img01" class="img-responsive" />
-					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal for portfolio item 3 -->
-	<div class="modal fade" id="Modal-3" tabindex="-1" role="dialog" aria-labelledby="Modal-label-3">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="Modal-label-3">Lamp & Velvet</h4>
-				</div>
-				<div class="modal-body">
-					<img src="images/demo/portfolio-3.jpg" alt="img01" class="img-responsive" />
-					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal for portfolio item 4 -->
-	<div class="modal fade" id="Modal-4" tabindex="-1" role="dialog" aria-labelledby="Modal-label-4">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="Modal-label-4">Smart Name</h4>
-				</div>
-				<div class="modal-body">
-					<img src="images/demo/portfolio-4.jpg" alt="img01" class="img-responsive" />
-					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal for portfolio item 5 -->
-	<div class="modal fade" id="Modal-5" tabindex="-1" role="dialog" aria-labelledby="Modal-label-5">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="Modal-label-5">Fast People</h4>
-				</div>
-				<div class="modal-body">
-					<img src="images/demo/portfolio-5.jpg" alt="img01" class="img-responsive" />
-					<div class="modal-works"><span>Branding</span><span>Web Design</span></div>
-					<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	{% endfor %}
