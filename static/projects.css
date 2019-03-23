@@ -1,4 +1,38 @@
 
+/* works Section */
+
+
+.main_works{
+	padding: 5px 0px;
+	overflow:hidden;
+}
+
+.single_works{
+    width: 70%;
+    margin: auto;
+}
+
+.single_works_deatels{
+	margin-top:20%;
+}
+
+.single_works_deatels i{
+    color: #B31B1B;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+
+}
+.single_works_deatels h5{
+	font-size: 15px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+.single_works_deatels p{
+	font-size: 10px;
+}
+
+
 /*--------------------
 4. Sections
 --------------------*/
