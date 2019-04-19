@@ -13,7 +13,7 @@ import os
 
 DETECTION_SCALE = 0.125
 CROP_SCALE = 2
-TARGET_RESOLUTION = 500
+TARGET_RESOLUTION = 250
 
 if __name__=="__main__":
     if len(sys.argv) < 4:
@@ -54,7 +54,7 @@ if __name__=="__main__":
             maxdim = maxface[3]
 
         maxdim = maxdim * CROP_SCALE
-        cx = maxface[0] - (maxdim*1.5 - maxface[2]) / 2
+        cx = maxface[0] - (maxdim - maxface[2]) / 2
         cy = maxface[1] - (maxdim - maxface[3]) / 2
 
         cx = int(cx / DETECTION_SCALE)
@@ -68,10 +68,10 @@ if __name__=="__main__":
             cy = 0
 
         cimg = img[cy:cy + cs, cx-3*cs:cx + 2*cs]
-        # simg = cv2.resize(cimg,None,fx=0.5,fy=0.5)
+        simg = cv2.resize(cimg,None,fx=0.5,fy=0.5)
 
         # cimg = img[cy:cy + cs, cx:cx + cs]
-        simg = cv2.resize(cimg, None, fx=scale, fy=scale)
+        # simg = cv2.resize(cimg, None, fx=scale, fy=scale)
 
         # Save the result
         cv2.imwrite(os.path.join(sys.argv[3], os.path.basename(imgName)), simg)
