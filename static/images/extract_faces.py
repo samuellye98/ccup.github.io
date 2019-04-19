@@ -2,7 +2,7 @@
 #1. Download python and cv2
 #2. Download the haar cascade so that the faces can be detected
 #3. Run in terminal using this format python extract_faces.py <haar cascade> <input folder> <output folder>
-# python extract_faces.py haarcascade_frontalface_default members test2
+# python extract_faces.py haarcascade_frontalface_default.xml members test
 
 # Extract and crop faces from an image
 
@@ -13,7 +13,7 @@ import os
 
 DETECTION_SCALE = 0.125
 CROP_SCALE = 2
-TARGET_RESOLUTION = 1600
+TARGET_RESOLUTION = 500
 
 if __name__=="__main__":
     if len(sys.argv) < 4:
@@ -32,7 +32,6 @@ if __name__=="__main__":
     for imgName in images:
         # Read the image and convert it to grayscale
         img = cv2.imread(imgName)
-        print("here")
         rimg = cv2.resize(img, None, fx=DETECTION_SCALE, fy=DETECTION_SCALE)
         gimg = cv2.cvtColor(rimg, cv2.COLOR_BGR2GRAY)
 
@@ -55,23 +54,24 @@ if __name__=="__main__":
             maxdim = maxface[3]
 
         maxdim = maxdim * CROP_SCALE
-        cx = maxface[0] - (maxdim - maxface[2]) / 2
+        cx = maxface[0] - (maxdim*1.5 - maxface[2]) / 2
         cy = maxface[1] - (maxdim - maxface[3]) / 2
 
         cx = int(cx / DETECTION_SCALE)
         cy = int(cy / DETECTION_SCALE)
         cs = int(maxdim / DETECTION_SCALE)
         scale = (1.0* TARGET_RESOLUTION)/ cs
+        print(cx,cy,cs)
         if cx < 0:
             cx = 0
         if cy < 0:
             cy = 0
-        print(cx,cy)
+
         cimg = img[cy:cy + cs, cx-3*cs:cx + 2*cs]
-        simg = cv2.resize(cimg, (1600,1078))
+        # simg = cv2.resize(cimg,None,fx=0.5,fy=0.5)
 
         # cimg = img[cy:cy + cs, cx:cx + cs]
-        # simg = cv2.resize(cimg, None, fx=scale, fy=scale)
+        simg = cv2.resize(cimg, None, fx=scale, fy=scale)
 
         # Save the result
         cv2.imwrite(os.path.join(sys.argv[3], os.path.basename(imgName)), simg)
