@@ -2756,5 +2756,36 @@ b i:last-child {
 }
 
 
+/* Slider
+==================================================*/
+
+.w3-center {
+  display:inline-block;
+  width:auto;
+}
+
+.w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}
+
+.w3-section,.w3-code{margin-top:16px!important;margin-bottom:16px!important}
+
+/* Gallery
+==================================================*/
+#wrapper .gtext {
+  visibility:hidden;
+  font-size:100px;
+
+  /* new styles below: */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  line-height: 100%;
+}
+
+#wrapper:hover .gtext {
+visibility:visible;
+}
+
 
 /*# sourceMappingURL=style.css.map */
